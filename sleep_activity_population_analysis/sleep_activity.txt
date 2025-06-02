@@ -1,0 +1,21 @@
+TOTAL PATIENTS ANALYZED: 792
+
+ACTIVITY DATA:
+  Patients with activity data: 792/792 (100.0%)
+  Coverage percentage: mean=100.0%, median=100.0%
+  Total duration (hours): mean=534.6, median=358.1
+  Time span (hours): mean=534.6, median=358.1
+  Longest continuous period: mean=533.6, max=6553.3 hours
+
+SLEEP DATA:
+  Patients with sleep data: 787/792 (99.4%)
+  Coverage percentage: mean=51.2%, median=38.8%
+  Total duration (hours): mean=102.5, median=95.3 #how much sleep time 
+  Time span (hours): mean=340.8, median=246.2 # start to end time 
+  Longest continuous period: mean=11.7, max=930.9 hours
+
+HIGH QUALITY DATA (≥80% coverage):
+  Activity: 792 patients (100.0%)
+  Sleep: 34 patients (4.3%)
+
+PATIENTS WITH BOTH DATASETS: 787 (99.4%)
