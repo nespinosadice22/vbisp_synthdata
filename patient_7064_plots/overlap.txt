@@ -1,0 +1,124 @@
+
+BLOOD_GLUCOSE TEMPORAL ANALYSIS:
+  Total measurements: 2375
+  Time span: 2023-11-07 20:41:41+00:00 to 2023-11-16 03:06:41+00:00
+  Duration: 8 days 06:25:00
+  Measurement intervals:
+    Min: 299.0 seconds
+    Max: 2100.0 seconds
+    Mean: 300.9 seconds
+    Median: 300.0 seconds
+  Most common intervals:
+    300.0s: 2368 times (99.7%)
+    301.0s: 2 times (0.1%)
+    299.0s: 2 times (0.1%)
+  Value statistics:
+    Min: -1.0
+    Max: 184.0
+    Mean: 114.94
+    Std: 22.51
+    Negative values: 9 (0.4%)
+
+HEART_RATE TEMPORAL ANALYSIS:
+  Total measurements: 10751
+  Time span: 2023-11-07 18:18:15+00:00 to 2023-11-20 20:53:15+00:00
+  Duration: 13 days 02:35:00
+  Measurement intervals:
+    Min: 60.0 seconds
+    Max: 960.0 seconds
+    Mean: 105.3 seconds
+    Median: 60.0 seconds
+  Most common intervals:
+    60.0s: 8464 times (78.7%)
+    120.0s: 1315 times (12.2%)
+    180.0s: 366 times (3.4%)
+  Value statistics:
+    Min: 0.0
+    Max: 134.0
+    Mean: 77.92
+    Std: 20.86
+    Zero values: 340 (3.2%)
+
+OXYGEN_SAT TEMPORAL ANALYSIS:
+  Total measurements: 1396
+  Time span: 2023-11-08 06:06:27+00:00 to 2023-11-18 06:01:27+00:00
+  Duration: 9 days 23:55:00
+  Measurement intervals:
+    Min: 60.0 seconds
+    Max: 158580.0 seconds
+    Mean: 619.1 seconds
+    Median: 60.0 seconds
+  Most common intervals:
+    60.0s: 1205 times (86.4%)
+    120.0s: 71 times (5.1%)
+    180.0s: 42 times (3.0%)
+  Value statistics:
+    Min: 74.0
+    Max: 100.0
+    Mean: 89.62
+    Std: 4.99
+
+CALORIE TEMPORAL ANALYSIS:
+  Total measurements: 1161
+  Time span: 2023-11-07 17:15:12+00:00 to 2023-11-17 23:32:28+00:00
+  Duration: 10 days 06:17:16
+  Measurement intervals:
+    Min: 16.0 seconds
+    Max: 80296.0 seconds
+    Mean: 764.3 seconds
+    Median: 180.0 seconds
+  Most common intervals:
+    60.0s: 314 times (27.1%)
+    120.0s: 203 times (17.5%)
+    180.0s: 142 times (12.2%)
+  Value statistics:
+    Min: 0
+    Max: 378
+    Mean: 116.02
+    Std: 86.14
+    Zero values: 7 (0.6%)
+
+RESP_RATE TEMPORAL ANALYSIS:
+  Total measurements: 18868
+  Time span: 2023-11-07 18:17:34+00:00 to 2023-11-20 20:58:34+00:00
+  Duration: 13 days 02:41:00
+  Measurement intervals:
+    Min: 60.0 seconds
+    Max: 120.0 seconds
+    Mean: 60.0 seconds
+    Median: 60.0 seconds
+  Most common intervals:
+    60.0s: 18853 times (99.9%)
+    120.0s: 14 times (0.1%)
+  Value statistics:
+    Min: -2.0
+    Max: 22.35
+    Mean: 7.43
+    Std: 7.61
+    Negative values: 7711 (40.9%)
+
+STRESS TEMPORAL ANALYSIS:
+  Total measurements: 18877
+  Time span: 2023-11-07 18:17:05+00:00 to 2023-11-20 20:58:05+00:00
+  Duration: 13 days 02:41:00
+  Measurement intervals:
+    Min: 60.0 seconds
+    Max: 120.0 seconds
+    Mean: 60.0 seconds
+    Median: 60.0 seconds
+  Most common intervals:
+    60.0s: 18871 times (100.0%)
+    120.0s: 5 times (0.0%)
+  Value statistics:
+    Min: -2
+    Max: 100
+    Mean: 29.41
+    Std: 35.50
+    Zero values: 5 (0.0%)
+    Negative values: 9261 (49.1%)
+
+DATA AVAILABILITY SUMMARY:
+Overall time range: 2023-11-07 17:15:00+00:00 to 2023-11-20 20:58:34+00:00
+Total duration: 13 days 03:43:34
+Overlap window: 2023-11-08 06:06:27+00:00 to 2023-11-16 03:06:41+00:00
+Overlap duration: 7 days 21:00:14

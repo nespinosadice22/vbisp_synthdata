@@ -1,0 +1,259 @@
+============================================================
+DETAILED INTERVAL AND GAP ANALYSIS FOR PATIENT 7064
+Gap threshold: 30 minutes
+Saving plots to: ./patient_7064_plots
+================================================================================
+
+============================================================
+BLOOD_GLUCOSE - DETAILED INTERVAL ANALYSIS
+============================================================
+Total measurements: 2,375
+Time span: 2023-11-07 20:41:41+00:00 to 2023-11-16 03:06:41+00:00
+Total duration: 8 days 06:25:00
+Average measurement rate: 11.97 measurements/hour
+
+INTERVAL STATISTICS:
+  Min interval: 299.0 seconds (4.98 minutes)
+  Max interval: 2100.0 seconds (35.00 minutes)
+  Mean interval: 300.9 seconds (5.01 minutes)
+  Median interval: 300.0 seconds (5.00 minutes)
+  Std interval: 37.5 seconds (0.62 minutes)
+
+MOST COMMON INTERVALS:
+  300s (5.0min): 2,368 times (99.7%)
+  301s (5.0min): 2 times (0.1%)
+  299s (5.0min): 2 times (0.1%)
+  600s (10.0min): 1 times (0.0%)
+  2100s (35.0min): 1 times (0.0%)
+
+GAP ANALYSIS (gaps > 30 minutes):
+  Number of gaps: 1
+  Gap duration range: 35.0 to 35.0 minutes
+  Mean gap duration: 35.0 minutes
+  Total time in gaps: 0.58 hours (0.3% of total time)
+
+  LARGEST GAPS:
+    1. 2023-11-16 01:56:41+00:00 to 2023-11-16 02:31:41+00:00 (35.0 minutes)
+
+RECORDING PATTERN ANALYSIS:
+  Most active hours: 0:00 (108 measurements), 1:00 (108 measurements), 21:00 (108 measurements)
+  Least active hours: 11:00 (95 measurements), 4:00 (96 measurements), 5:00 (96 measurements)
+  Recording days: 10 unique days
+  Measurements per day: min=32, max=288, mean=237.5
+
+============================================================
+HEART_RATE - DETAILED INTERVAL ANALYSIS
+============================================================
+Total measurements: 10,751
+Time span: 2023-11-07 18:18:15+00:00 to 2023-11-20 20:53:15+00:00
+Total duration: 13 days 02:35:00
+Average measurement rate: 34.18 measurements/hour
+
+INTERVAL STATISTICS:
+  Min interval: 60.0 seconds (1.00 minutes)
+  Max interval: 960.0 seconds (16.00 minutes)
+  Mean interval: 105.3 seconds (1.76 minutes)
+  Median interval: 60.0 seconds (1.00 minutes)
+  Std interval: 159.7 seconds (2.66 minutes)
+
+MOST COMMON INTERVALS:
+  60s (1.0min): 8,464 times (78.7%)
+  120s (2.0min): 1,315 times (12.2%)
+  180s (3.0min): 366 times (3.4%)
+  960s (16.0min): 325 times (3.0%)
+  240s (4.0min): 138 times (1.3%)
+  300s (5.0min): 65 times (0.6%)
+  360s (6.0min): 31 times (0.3%)
+  420s (7.0min): 16 times (0.1%)
+  480s (8.0min): 11 times (0.1%)
+  600s (10.0min): 7 times (0.1%)
+
+GAP ANALYSIS (gaps > 30 minutes):
+  Number of gaps: 0
+
+RECORDING PATTERN ANALYSIS:
+  Most active hours: 21:00 (570 measurements), 23:00 (563 measurements), 20:00 (556 measurements)
+  Least active hours: 5:00 (317 measurements), 4:00 (344 measurements), 9:00 (359 measurements)
+  Recording days: 14 unique days
+  Measurements per day: min=79, max=1105, mean=767.9
+
+============================================================
+OXYGEN_SAT - DETAILED INTERVAL ANALYSIS
+============================================================
+Total measurements: 1,396
+Time span: 2023-11-08 06:06:27+00:00 to 2023-11-18 06:01:27+00:00
+Total duration: 9 days 23:55:00
+Average measurement rate: 5.82 measurements/hour
+
+INTERVAL STATISTICS:
+  Min interval: 60.0 seconds (1.00 minutes)
+  Max interval: 158580.0 seconds (2643.00 minutes)
+  Mean interval: 619.1 seconds (10.32 minutes)
+  Median interval: 60.0 seconds (1.00 minutes)
+  Std interval: 6924.3 seconds (115.40 minutes)
+
+MOST COMMON INTERVALS:
+  60s (1.0min): 1,205 times (86.4%)
+  120s (2.0min): 71 times (5.1%)
+  180s (3.0min): 42 times (3.0%)
+  240s (4.0min): 20 times (1.4%)
+  360s (6.0min): 8 times (0.6%)
+  300s (5.0min): 8 times (0.6%)
+  540s (9.0min): 5 times (0.4%)
+  600s (10.0min): 4 times (0.3%)
+  660s (11.0min): 3 times (0.2%)
+  1200s (20.0min): 3 times (0.2%)
+
+GAP ANALYSIS (gaps > 30 minutes):
+  Number of gaps: 9
+  Gap duration range: 1201.0 to 2643.0 minutes
+  Mean gap duration: 1369.4 minutes
+  Total time in gaps: 205.42 hours (85.6% of total time)
+
+  LARGEST GAPS:
+    1. 2023-11-14 09:58:27+00:00 to 2023-11-16 06:01:27+00:00 (2643.0 minutes)
+    2. 2023-11-09 09:59:27+00:00 to 2023-11-10 06:42:27+00:00 (1243.0 minutes)
+    3. 2023-11-16 10:00:27+00:00 to 2023-11-17 06:15:27+00:00 (1215.0 minutes)
+    4. 2023-11-13 09:52:27+00:00 to 2023-11-14 06:01:27+00:00 (1209.0 minutes)
+    5. 2023-11-12 09:59:27+00:00 to 2023-11-13 06:05:27+00:00 (1206.0 minutes)
+
+RECORDING PATTERN ANALYSIS:
+  Most active hours: 9:00 (405 measurements), 8:00 (350 measurements), 6:00 (338 measurements)
+  Least active hours: 10:00 (2 measurements), 7:00 (301 measurements), 6:00 (338 measurements)
+  Recording days: 10 unique days
+  Measurements per day: min=1, max=233, mean=139.6
+  Low activity days (1 days with <14 measurements):
+    2023-11-18: 1 measurements
+
+============================================================
+CALORIE - DETAILED INTERVAL ANALYSIS
+============================================================
+Total measurements: 1,161
+Time span: 2023-11-07 17:15:12+00:00 to 2023-11-17 23:32:28+00:00
+Total duration: 10 days 06:17:16
+Average measurement rate: 4.71 measurements/hour
+
+INTERVAL STATISTICS:
+  Min interval: 16.0 seconds (0.27 minutes)
+  Max interval: 80296.0 seconds (1338.27 minutes)
+  Mean interval: 764.3 seconds (12.74 minutes)
+  Median interval: 180.0 seconds (3.00 minutes)
+  Std interval: 3139.6 seconds (52.33 minutes)
+
+MOST COMMON INTERVALS:
+  60s (1.0min): 314 times (27.1%)
+  120s (2.0min): 203 times (17.5%)
+  180s (3.0min): 142 times (12.2%)
+  240s (4.0min): 71 times (6.1%)
+  300s (5.0min): 56 times (4.8%)
+  360s (6.0min): 36 times (3.1%)
+  420s (7.0min): 27 times (2.3%)
+  600s (10.0min): 20 times (1.7%)
+  720s (12.0min): 17 times (1.5%)
+  480s (8.0min): 16 times (1.4%)
+
+GAP ANALYSIS (gaps > 30 minutes):
+  Number of gaps: 88
+  Gap duration range: 31.0 to 1338.3 minutes
+  Mean gap duration: 111.0 minutes
+  Total time in gaps: 162.85 hours (66.1% of total time)
+
+  LARGEST GAPS:
+    1. 2023-11-08 08:08:12+00:00 to 2023-11-09 06:26:28+00:00 (1338.3 minutes)
+    2. 2023-11-15 03:08:28+00:00 to 2023-11-15 11:19:28+00:00 (491.0 minutes)
+    3. 2023-11-14 13:11:28+00:00 to 2023-11-14 18:49:28+00:00 (338.0 minutes)
+    4. 2023-11-09 06:45:28+00:00 to 2023-11-09 12:00:28+00:00 (315.0 minutes)
+    5. 2023-11-10 04:37:28+00:00 to 2023-11-10 09:50:28+00:00 (313.0 minutes)
+
+RECORDING PATTERN ANALYSIS:
+  Most active hours: 0:00 (123 measurements), 23:00 (110 measurements), 19:00 (105 measurements)
+  Least active hours: 9:00 (1 measurements), 10:00 (2 measurements), 11:00 (4 measurements)
+  Recording days: 11 unique days
+  Measurements per day: min=70, max=152, mean=105.5
+
+============================================================
+RESP_RATE - DETAILED INTERVAL ANALYSIS
+============================================================
+Total measurements: 18,868
+Time span: 2023-11-07 18:17:34+00:00 to 2023-11-20 20:58:34+00:00
+Total duration: 13 days 02:41:00
+Average measurement rate: 59.96 measurements/hour
+
+INTERVAL STATISTICS:
+  Min interval: 60.0 seconds (1.00 minutes)
+  Max interval: 120.0 seconds (2.00 minutes)
+  Mean interval: 60.0 seconds (1.00 minutes)
+  Median interval: 60.0 seconds (1.00 minutes)
+  Std interval: 1.6 seconds (0.03 minutes)
+
+MOST COMMON INTERVALS:
+  60s (1.0min): 18,853 times (99.9%)
+  120s (2.0min): 14 times (0.1%)
+
+GAP ANALYSIS (gaps > 30 minutes):
+  Number of gaps: 0
+
+RECORDING PATTERN ANALYSIS:
+  Most active hours: 19:00 (840 measurements), 20:00 (838 measurements), 18:00 (823 measurements)
+  Least active hours: 6:00 (777 measurements), 13:00 (777 measurements), 1:00 (778 measurements)
+  Recording days: 14 unique days
+  Measurements per day: min=343, max=1440, mean=1347.7
+
+============================================================
+STRESS - DETAILED INTERVAL ANALYSIS
+============================================================
+Total measurements: 18,877
+Time span: 2023-11-07 18:17:05+00:00 to 2023-11-20 20:58:05+00:00
+Total duration: 13 days 02:41:00
+Average measurement rate: 59.99 measurements/hour
+
+INTERVAL STATISTICS:
+  Min interval: 60.0 seconds (1.00 minutes)
+  Max interval: 120.0 seconds (2.00 minutes)
+  Mean interval: 60.0 seconds (1.00 minutes)
+  Median interval: 60.0 seconds (1.00 minutes)
+  Std interval: 1.0 seconds (0.02 minutes)
+
+MOST COMMON INTERVALS:
+  60s (1.0min): 18,871 times (100.0%)
+  120s (2.0min): 5 times (0.0%)
+
+GAP ANALYSIS (gaps > 30 minutes):
+  Number of gaps: 0
+
+RECORDING PATTERN ANALYSIS:
+  Most active hours: 19:00 (840 measurements), 20:00 (839 measurements), 18:00 (823 measurements)
+  Least active hours: 1:00 (779 measurements), 5:00 (779 measurements), 7:00 (779 measurements)
+  Recording days: 14 unique days
+  Measurements per day: min=343, max=1440, mean=1348.4
+
+============================================================
+ACTIVITY - INTERVAL-BASED DATA ANALYSIS
+============================================================
+Total activity intervals: 4261
+Time span: 2023-11-07 17:15:00+00:00 to 2023-11-20 20:58:16+00:00
+Activity types: {'sedentary': 3099, 'walking': 745, 'generic': 416, '': 1}
+Interval durations (minutes): min=0.0, max=61.0, mean=4.4
+
+============================================================
+SLEEP - INTERVAL-BASED DATA ANALYSIS
+============================================================
+Total sleep intervals: 245
+Time span: 2023-11-08 01:38:17+00:00 to 2023-11-17 12:52:17+00:00
+Sleep stages: {'light': 119, 'awake': 58, 'deep': 38, 'rem': 30}
+Interval durations (minutes): min=1.0, max=125.0, mean=27.2
+
+================================================================================
+ALIGNMENT RECOMMENDATIONS:
+================================================================================
+blood_glucose: median interval = 300 seconds (5.0 minutes)
+heart_rate: median interval = 60 seconds (1.0 minutes)
+oxygen_sat: median interval = 60 seconds (1.0 minutes)
+calorie: median interval = 180 seconds (3.0 minutes)
+resp_rate: median interval = 60 seconds (1.0 minutes)
+stress: median interval = 60 seconds (1.0 minutes)
+
+Suggested alignment strategies:
+  Finest resolution: 60 seconds (1.0 minutes)
+  Balanced resolution: 60 seconds (1.0 minutes)
+  Coarsest resolution: 300 seconds (5.0 minutes)
