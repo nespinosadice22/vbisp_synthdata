@@ -40,11 +40,11 @@ class Generator(tf.keras.Model):
 
 def gen(modeln, parameter_dict):
     checkpoint_directory = "training_checkpoints_emrwgan_" + modeln
-    checkpoint_prefix = '/YOUR_LOCAL_PATH/GAN_training/' + checkpoint_directory + "/ckpt-"
+    checkpoint_prefix = 'GAN_training/' + checkpoint_directory + "/ckpt-"
     generator = Generator(parameter_dict)
 
     checkpoint = tf.train.Checkpoint(generator=generator)
-    manager = tf.train.CheckpointManager(checkpoint, directory='/YOUR_LOCAL_PATH/GAN_training/' + checkpoint_directory, max_to_keep=50)
+    manager = tf.train.CheckpointManager(checkpoint, directory='GAN_training/' + checkpoint_directory, max_to_keep=50)
     
     if parameter_dict['load_checkpoint_number'] == 'best':
         status = checkpoint.restore(manager.latest_checkpoint)
@@ -76,7 +76,7 @@ def gen(modeln, parameter_dict):
     for col_name, i in zip(continuous_col_name_list, parameter_dict['continuous_feature_col_ind']):
         xmin, xmax = feature_range[col_name][0], feature_range[col_name][1]
         syn[:, i] = (1 - syn[:, i])*xmin + syn[:,i]*xmax
-    np.save('/YOUR_LOCAL_PATH/GAN_training/syn/emrwgan_model_'+modeln+'_ckpt_'+parameter_dict['load_checkpoint_number']+'.npy', syn)
+    np.save('GAN_training/syn/emrwgan_model_'+modeln+'_ckpt_'+parameter_dict['load_checkpoint_number']+'.npy', syn)
 
 
 if __name__ == '__main__':
@@ -86,22 +86,31 @@ if __name__ == '__main__':
     parser.add_argument('--model_id', type=str)
     parser.add_argument('--load_checkpoint', type=str)
     args = parser.parse_args()
-
+    os.makedirs("GAN_training/syn", exist_ok=True)
     parameter_dict = {}
-    parameter_dict['training_data_path'] = '/YOUR_LOCAL_PATH/preprocessed_training_data.csv'
-    parameter_dict['feature_range_path'] = '/YOUR_LOCAL_PATH/min_max_log.npy'
-    parameter_dict['continuous_feature_col_ind'] = [1456,1457,1458,1459]
-    parameter_dict['batchsize'] = 4096
+    parameter_dict['training_data_path'] = 'preprocessing/preprocessed_training_data.csv'
+    parameter_dict['feature_range_path'] = 'preprocessing/min_max_log.npy'
+    
+    #parameter_dict['batchsize'] = 4096
+    #parameter_dict['h_dimension'] = 384
+    parameter_dict['batchsize'] = 1024 #made smaller
+    parameter_dict['h_dimension'] = 128 #made smaller 
     parameter_dict['Z_DIM'] = 128
-    parameter_dict['dimension'] = 1460
-    parameter_dict['h_dimension'] = 384
-    parameter_dict['race_dimension'] = 6
-    parameter_dict['outcome_dimension'] = 6
+
+    #parameter_dict['dimension'] = 1460
+    #parameter_dict['race_dimension'] = 0  
+    #parameter_dict['outcome_dimension'] = 6
+    #parameter_dict['continuous_feature_col_ind'] = [1456,1457,1458,1459]
+    df = pd.read_csv('preprocessing/normalized_training_data.csv')
+    parameter_dict['dimension'] = df.shape[1] 
+    parameter_dict['race_dimension'] = 0  
+    parameter_dict['outcome_dimension'] = df.columns.get_loc("Type 2 Diabetes")
+    parameter_dict['continuous_feature_col_ind'] = [i for i in range(df.shape[1]) if i != parameter_dict['outcome_dimension']]
 
     parameter_dict['load_checkpoint_number'] = args.load_checkpoint 
 
-    os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-    os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu_id
+    #os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
+    #os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu_id
     os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
     gpu_devices = tf.config.experimental.list_physical_devices('GPU')
     for device in gpu_devices: tf.config.experimental.set_memory_growth(device, True)
