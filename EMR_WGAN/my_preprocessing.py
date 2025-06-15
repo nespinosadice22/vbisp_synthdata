@@ -49,7 +49,7 @@ def main():
     
     data2 = data.drop(columns=["patient_id", "day"])
     
-    data.to_csv(save_folder + '/preprocessed_training_data.csv', index=False)
+    data2.to_csv(save_folder + '/preprocessed_training_data.csv', index=False)
     #split by patient specifically 
     print("Percent of all rows with diabetes:", np.sum(data['Type 2 Diabetes'])/len(data))
 
