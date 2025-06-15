@@ -6,7 +6,7 @@ def main():
     os.makedirs(save_folder, exist_ok=True)
     data = pd.read_csv("raw_data/wearable_with_conditions_scalar_from_aligned_no_oxygen_sat.csv")
     data = data.rename(columns={'Type II Diabetes': 'Type 2 Diabetes'})
-    data = data.drop(columns=["Unnamed: 0", 'Unnamed: 0_x', 'Unnamed: 0_y',
+    data = data.drop(columns=["Unnamed: 0", 
        'Age-related macular degeneration', 'Arthritis', 'Cancer',
        'Cataracts (1+ eyes)', 'Chronic pullmonary problems',
        'Circulation problems', 'Diabetic retinopathy (1+)',
@@ -20,6 +20,8 @@ def main():
        'Urinary problems' ])
     print(data.columns)
     print(data.head())
+
+    data = data.dropna()
     #normalize columns 
     min_max_log = {}
     continuous_cols = ['heart_rate_min', 'heart_rate_median',
@@ -46,9 +48,12 @@ def main():
     np.save(save_folder+ '/min_max_log.npy', min_max_log)
     
     data2 = data.drop(columns=["patient_id", "day"])
+    
     data.to_csv(save_folder + '/preprocessed_training_data.csv', index=False)
     #split by patient specifically 
     print("Percent of all rows with diabetes:", np.sum(data['Type 2 Diabetes'])/len(data))
+
+   
     np.random.seed(0)
     unique_pids = data["patient_id"].unique()
     np.random.shuffle(unique_pids)
@@ -60,6 +65,7 @@ def main():
     print("Percent of all training rows with diabetes:", np.sum(training_data_df['Type 2 Diabetes'])/len(training_data_df))
     print("Percent of all testing rows with diabetes:", np.sum(testing_data_df['Type 2 Diabetes'])/len(testing_data_df))
     training_data_df = training_data_df.drop(columns=["patient_id", "day"])
+    testing_data_df = testing_data_df.drop(columns=["patient_id", "day"])
     training_data_df.to_csv(save_folder + '/normalized_training_data.csv', index=False)
     testing_data_df.to_csv(save_folder + '/normalized_testing_data.csv', index=False)
 
@@ -75,6 +81,22 @@ def main():
     training_data_df.to_csv(save_folder + '/original_training_data.csv', index=False)
     testing_data_df.to_csv(save_folder + '/original_testing_data.csv', index=False)
 
+    df = pd.read_csv("preprocessing/preprocessed_training_data.csv")
+    nan_rows = df[df.isnull().any(axis=1)]
+    print("Rows with NaN values:")
+    print(nan_rows)
+    nan_columns = df.columns[df.isnull().any()].tolist()
+    print("\nColumns with NaN values:")
+    print(nan_columns)
+
+
+    df = pd.read_csv("preprocessing/normalized_training_data.csv")
+    nan_rows = df[df.isnull().any(axis=1)]
+    print("Rows with NaN values:")
+    print(nan_rows)
+    nan_columns = df.columns[df.isnull().any()].tolist()
+    print("\nColumns with NaN values:")
+    print(nan_columns)
 
 if __name__ == "__main__":
     main()
