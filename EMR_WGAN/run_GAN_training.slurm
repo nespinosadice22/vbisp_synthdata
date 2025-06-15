@@ -27,4 +27,4 @@ conda activate venv
 #export WANDB_MODE=offline
 
 
-python GAN_training.py --gpu_id xx --model_id gan_test1
+python GAN_training.py --gpu_id 0 --model_id gan_test1

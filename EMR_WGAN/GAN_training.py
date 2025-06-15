@@ -153,8 +153,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     parameter_dict = {}
-    parameter_dict['training_data_path'] = '/preprocessing/normalized_training_data.csv'
-    parameter_dict['feature_range_path'] = '/preprocessing/min_max_log.npy'
+    parameter_dict['training_data_path'] = 'preprocessing/normalized_training_data.csv'
+    parameter_dict['feature_range_path'] = 'preprocessing/min_max_log.npy'
     parameter_dict['continuous_feature_col_ind'] = [1456,1457,1458,1459]
     parameter_dict['batchsize'] = 4096
     parameter_dict['Z_DIM'] = 128
