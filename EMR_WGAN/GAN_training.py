@@ -155,12 +155,17 @@ if __name__ == '__main__':
     parameter_dict = {}
     parameter_dict['training_data_path'] = 'preprocessing/normalized_training_data.csv'
     parameter_dict['feature_range_path'] = 'preprocessing/min_max_log.npy'
-    parameter_dict['continuous_feature_col_ind'] = [1456,1457,1458,1459]
-    parameter_dict['batchsize'] = 4096
+    parameter_dict['continuous_feature_col_ind'] = [1456,1457,1458,1459] #unused in script 
+    #parameter_dict['batchsize'] = 4096 
+    parameter_dict['batchsize'] = 1024 #making smaller 
     parameter_dict['Z_DIM'] = 128
-    parameter_dict['dimension'] = 1460
-    parameter_dict['h_dimension'] = 384
-    parameter_dict['race_dimension'] = 6
+    df = pd.read_csv('preprocessing/normalized_training_data.csv')
+    parameter_dict['dimension'] = df.shape[1]
+    #parameter_dict['dimension'] = 1460
+    #parameter_dict['h_dimension'] = 384
+    parameter_dict['h_dimension'] = 128 #make smaller 
+    parameter_dict['race_dimension'] = 0 #no categorical mutually exclusive ones 
+    #parameter_dict['race_dimension'] = 6
 
 
     #os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
