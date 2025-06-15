@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=train_test1
+#SBATCH --job-name=gen_test1
 #SBATCH --partition=gpu            
 #SBATCH --qos=gpu-medium           
 #SBATCH --nodes=1
@@ -27,4 +27,4 @@ conda activate venv
 #export WANDB_MODE=offline
 
 
-python GAN_training.py --gpu_id 0 --model_id gan_test1
+python GAN_generation.py --gpu_id 0 --model_id gan_test1 --load_checkpoint 13150
