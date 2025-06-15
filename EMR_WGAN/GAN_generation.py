@@ -105,7 +105,8 @@ if __name__ == '__main__':
     parameter_dict['dimension'] = df.shape[1] 
     parameter_dict['race_dimension'] = 0  
     parameter_dict['outcome_dimension'] = df.columns.get_loc("Type 2 Diabetes")
-    parameter_dict['continuous_feature_col_ind'] = [i for i in range(df.shape[1]) if i != parameter_dict['outcome_dimension']]
+    percent_sleep_sleeping = df.columns.get_loc("percent_of_sleep_sleeping")
+    parameter_dict['continuous_feature_col_ind'] = [i for i in range(df.shape[1]) if i != parameter_dict['outcome_dimension'] and i != percent_sleep_sleeping]
 
     parameter_dict['load_checkpoint_number'] = args.load_checkpoint 
 
