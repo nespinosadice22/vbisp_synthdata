@@ -83,7 +83,7 @@ def train(modeln, parameter_dict):
             maxval=1.)
 
         with tf.GradientTape() as disc_tape:
-            synthetic = generator(z, False)
+            synthetic = generator(z, training = False) #adding training = 
             interpolate = real + epsilon * (synthetic - real)
 
             real_output = discriminator(real)
@@ -107,7 +107,7 @@ def train(modeln, parameter_dict):
     def g_step():
         z = tf.random.normal(shape=[parameter_dict['batchsize'], parameter_dict['Z_DIM']])
         with tf.GradientTape() as gen_tape:
-            synthetic = generator(z,True)
+            synthetic = generator(z,training = True) #added training = 
 
             fake_output = discriminator(synthetic)
 
